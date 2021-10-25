@@ -1,0 +1,25 @@
+*, *::after,
+*::before{
+    margin:0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    // this defines what 1 rem is
+    font-size: 100% !important;
+    background-color: #f8f8f8 !important;
+    // background-color: $color-hover !important;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    // font-size: 100%;
+    line-height: 1.6;
+    background-color: #f8f8f8 !important;
+    // background-color: $color-hover !important;
+    font-family: 'Inter', sans-serif;
+}

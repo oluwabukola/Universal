@@ -1,0 +1,130 @@
+.trend__container{
+//  background-color: $color-white !important;
+    padding: 1rem 2rem;
+    margin: 2rem 0;
+}
+.trend__row{
+   width:100% !important;
+   padding-right: 0.5rem;
+}
+
+.trend__header{
+     
+     padding: 0.5rem  2rem;
+    margin-bottom: 0.5rem;
+    .trend__icon-container{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: $color-purple;
+    border: 2px solid $color-purple;
+    margin-right: 0.5rem;
+    font-size: 3rem;
+    
+    
+    }
+
+    .trend__icon-container-right{
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: $color-purple;
+        border: 2px solid $color-purple;
+        margin-left: 0.5rem;
+        font-size: 3rem;
+        
+        }
+
+}
+
+
+
+.col__end{
+    display: flex !important;
+  justify-content: flex-end;
+
+
+}
+
+.videolist{
+    width: 100%;
+   
+    padding-top: 0.8rem !important;
+    padding-bottom: 0.8rem !important;
+    background-color: $color-white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    
+
+    &__image{
+        a{
+            color:$color-white;;
+            text-decoration: none !important;
+        }
+    }
+
+
+    &__background-image{
+        width: 100%;
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+       .video__play{
+           font-size: 3rem !important;
+           
+       }
+       .video__duration{
+           align-self: flex-end;
+        //    background-color: yellowgreen;
+           position: absolute;
+           bottom:0.3rem;
+         padding: 0.1rem 0.7rem;
+        
+         font-weight: 600;
+         font-size: $navlink-font-size !important;
+       }
+    }
+}
+
+
+.videolist__body{
+    background-color: $color-white;
+    color: #333;
+    line-height: 1.2;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+
+    &--title{
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+    }
+     &--speaker{
+         font-size: $navlink-font-size;
+         font-weight: 500;
+     }
+}
+
+
+.slick-next:before, .slick-prev:before {
+    color:$color-purple !important;
+}
+
+.container{
+    width: 100% !important;
+}
+
+.bottom-rule{
+    color: #ccc;
+    margin: 3rem 5rem;
+    border-top: 1px solid #999;    
+}

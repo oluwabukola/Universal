@@ -1,0 +1,98 @@
+.settings{
+@extend .update;
+
+}
+
+.settings__navigation{
+    @extend .profileEdit__update-link
+}
+
+.settings__account{
+    width: 75%;
+    padding: 0.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.settings__header{
+    // background: yellow;
+    margin-bottom: 2rem;
+}
+.settings__image{
+    width: 50%;
+    margin-bottom: 2rem;
+    // display: flex;
+    // flex-direction: column;
+
+    .settings__image--container{
+        width: 12rem;
+        height: 12rem;
+        background-size: cover;
+        border: 2px solid #802FE4;
+    }
+    .settings__image--control{
+        padding: 0.5rem 0.7rem;
+        .image__button{
+            text-decoration: none;
+            outline: none;
+            border: none;
+            background-color: $color-white;
+            
+            label{
+                cursor: pointer;
+            }
+
+            .image__file{
+                display: none;
+                }
+            i{
+                color: #333;
+                font-size: 0.7rem;
+                margin-right: 1rem;
+            }
+        }
+        .change-image{
+            border-bottom: 1px solid grey;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #333;
+           
+        }
+
+    }
+}
+
+.settings__form{
+    // width: 50%;
+    .settings__input{
+     display:flex;
+     flex-direction: column;
+        margin-bottom: 1.5rem;
+        width: 45%;
+
+        label{
+            margin-bottom: 0.5rem;
+            font-size: $navlink-font-size;
+            font-weight: 700;
+        }
+        input{
+            padding: 0.5rem;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid #ccc;
+        }
+    }
+}
+.settings__btn{
+    outline: none;
+    border: none;
+    padding: 0.5rem 2.5rem;
+    background-color: #802FE4;
+    color: $color-white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+}

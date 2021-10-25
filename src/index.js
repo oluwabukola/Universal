@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
+import { store } from './Store/Storage';
+ import 'bootstrap/dist/css/bootstrap.min.css';
+import { Provider } from 'react-redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import "../node_modules/slick-carousel/slick/slick.css"; 
+// import "../node_modules/slick-carousel/slick/slick-theme.css";
+
+
 
 ReactDOM.render(
-  <React.StrictMode>
+
+  <Provider store={store}>
+  <React.StrictMode >
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
+   </Provider>,
   document.getElementById('root')
 );
 

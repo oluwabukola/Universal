@@ -1,0 +1,216 @@
+.profileEdit{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+    
+
+}
+.profileEdit__picture{
+     background-color: $color-hover;
+     padding: 2rem 2rem;
+     display: flex;
+     justify-content: space-between;
+
+     .profileEdit__picture--text{
+        width: 70%;
+        // background-color: salmon;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+
+        p{
+            margin: 0;
+            font-size: 2rem;
+            font-weight:600 ;
+            color: $color-black;
+
+            
+        }
+
+        .edit__link{
+         
+            padding: 0.5rem 1rem;
+            
+
+            a{
+                color: $color-black;
+                font-size: $navlink-font-size;
+                text-decoration: none;
+                border-bottom: 1px solid #802FE4;
+            }
+        }
+    
+    }
+}
+
+.profileEdit__picture-container{
+    width: 30%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    .picture__cover{
+        width: 12rem;
+        height: 12rem;
+        // background-image: url(C:\Users\bbaiyewu\Desktop\universal\painless\src\img\profile-icon.jpg);
+        //  background-color: #802FE4;
+         padding: 1rem;
+        border: 2px solid #802FE4;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-decoration: none;
+        &:hover{
+            .picture__text{
+                display: block;
+                transition: opacity .3s;
+                opacity: 1;
+            }
+        }
+
+    }
+    .picture__text{
+        text-align: center;
+        font-size: $navlink-font-size;
+        padding: 0.2rem 0.8rem;
+        background-color: #ccc;
+        color: $color-white;
+        font-weight: 500;
+        opacity: 0;
+        // display: none;
+    }
+
+   
+}
+   
+.update{
+
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-white;
+    padding: 2rem 3rem;
+
+    .profileEdit__update-link{
+        width: 25%;
+        border-right: 1px solid #ccc;
+         ul{
+             list-style: none;
+             padding: 0 3rem;
+
+         }
+         li{
+             padding: 0.5rem; 
+             border-bottom: 1px dotted$color-black; 
+         }
+         a{
+            font-size: 1rem;
+            text-decoration: none;
+            color: #802FE4;
+            font-weight: 600;
+
+         }
+        .profile-link{
+            
+        }
+    }
+    .update__form{
+        width: 75%;
+        padding: 0.5rem 3rem;
+    }
+}
+
+.update__form{
+
+    .update__info{
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .update__title{
+        // background: pink;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        h3{
+            font-weight: lighter;
+        }
+    }
+
+    .update__input{
+        background-color: $color-hover;
+        padding: 1rem;
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .update__input div{
+        display: flex;
+        flex-direction: column;
+        width:45%;
+        label{
+            margin-bottom: 0.2rem;
+            font-size: $navlink-font-size;
+            font-weight: 700;
+        }
+        input, .region{
+            padding: 0.5rem;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid #ccc;
+        }
+    }
+
+    .update__input--column{
+        margin-bottom: 0.7rem;
+    }
+
+    .update__bio{
+      background-color: $color-hover;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+
+        label{
+            margin-bottom: 0.2rem;
+            font-size: $navlink-font-size;
+            font-weight: 700;
+        }
+        textarea{
+            border: 1px solid #ccc;
+            outline: none;
+            border-radius: 5px;
+        }
+    }
+
+    .form__submission{
+  
+    width: 70%;
+
+    input{
+        padding: 0.5rem 1.5rem;
+       border-radius: 5px;
+        color: $color-black;
+        font-size: 1rem;
+        font-weight: 700;
+        outline: none;
+        border: none;
+        border: 2px solid #ccc;
+
+    }
+
+    a{
+        color: $color-black;
+        text-decoration: none;
+        padding: 0.5rem 1.5rem;
+        font-weight: 700;
+       text-decoration: underline;
+    }
+    }
+}
+
