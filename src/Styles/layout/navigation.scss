@@ -193,11 +193,13 @@
 
 
     &__item{
-        // background-color: royalblue;
+        
         margin-bottom: 0.5rem;
-        &:hover{
+       
+        &:not(:last-child):hover{
             background-color: $color-hover;
         }
+      
     }
     &__item-link{
         display: flex;
@@ -228,3 +230,23 @@
         .divider{
                 background-color: #424242!important;
             }
+
+            .menudropdown__button{
+                display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding:0.7rem 1rem;
+        border: none;
+        outline: none;
+        background: $color-white;
+        svg{
+            font-size: 1.2rem;
+            color: $color-navbar;
+            margin-right: 0.5rem;
+        }
+        p{
+            margin: 0;
+        }
+            }
+
+            // className='menudropdown__item-link'

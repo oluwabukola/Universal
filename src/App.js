@@ -32,7 +32,7 @@ function App() {
               {/* <Route path='/video' exact component={VideoPlay}>
               </Route> */}
               
-              <Mains exact />
+              <Mains  />
           
          
            </Route>

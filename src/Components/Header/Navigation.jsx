@@ -110,7 +110,7 @@ useEffect(() => {
                     </li>
                     <li className='divider'></li>
                     <li className='menudropdown__item'  >
-                        <button  type='button' className='menudropdown__item-link' onClick={handleLogOut} >
+                        <button  type='button' className='menudropdown__button' onClick={handleLogOut} >
                         <RiLogoutCircleRLine />
                             <div><p>Log out</p></div>
                             { logoutData.loading && <Loader type="Puff"color="#00BFFF" height={50} width={50} /> }

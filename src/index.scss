@@ -582,7 +582,7 @@ body {
     overflow: hidden; }
   .menudropdown__item {
     margin-bottom: 0.5rem; }
-    .menudropdown__item:hover {
+    .menudropdown__item:not(:last-child):hover {
       background-color: #F0F0F0; }
   .menudropdown__item-link {
     display: flex;
@@ -608,6 +608,21 @@ body {
 
 .divider {
   background-color: #424242 !important; }
+
+.menudropdown__button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.7rem 1rem;
+  border: none;
+  outline: none;
+  background: #fff; }
+  .menudropdown__button svg {
+    font-size: 1.2rem;
+    color: #494949;
+    margin-right: 0.5rem; }
+  .menudropdown__button p {
+    margin: 0; }
 
 .sidenav {
   display: flex;

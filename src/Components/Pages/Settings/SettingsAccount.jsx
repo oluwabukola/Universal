@@ -56,10 +56,16 @@ console.log('bio', bio);
                { 
                photopix ? 
                 <div className="settings__image--container">
-                {bio !== null && bio.profile_picture !== null ? <img src={bio.profile_picture}/> : <img src={ photopix} />}
+                <img src={ photopix} style={{width: '100%', height: '100%'}} />
+
+                {/* {bio !== null && bio.profile_picture !== null ? <img src={bio.profile_picture}/> : <img src={ photopix} />} */}
                 </div>
                    : 
-                   <div className="settings__image--container" style={{backgroundImage: `url(${profile})`}}></div>
+                   <div className="settings__image--container" >
+                       {/* style={{backgroundImage: `url(${profile})`}} */}
+                {bio !== null && bio.profile_picture !== null ? <img src={bio.profile_picture} style={{width: '100%', height: '100%'}}/> : <img  style={{width: '100%', height: '100%'}} src={ profile} />} 
+
+                   </div>
                  }
                 <div className="settings__image--control">
                 <button className='image__button' >

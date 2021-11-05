@@ -51,4 +51,4 @@ const Mains = () => {
     )
 }
 
-export default Mains;
+export default withRouter(Mains);
