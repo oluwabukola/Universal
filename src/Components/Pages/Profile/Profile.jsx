@@ -26,11 +26,10 @@ import photo from '../../../img/profile-icon.jpg';
                <Link className='edit--link' to='/profile/edit'>Edit </Link>
                 </div>
                
-               <div className='profile__hero--organisation'>
+               {/* <div className='profile__hero--organisation'>
                    <span>Bcodes technology,</span>
                    <span>lagos,</span>
-                   <span> Nigeria nndnjslllllllllll;l,xlas:;</span>
-               </div>
+               </div> */}
             </div>
             </div>
         </section>

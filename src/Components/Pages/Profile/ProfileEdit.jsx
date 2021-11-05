@@ -1,18 +1,25 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import photo from '../../../img/profile-icon.jpg';
 import { CountryDropdown, RegionDropdown, CountryRegionData } from 'react-country-region-selector';
 import { profileSchema } from '../../../FormValidation/FormValidation';
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useDispatch } from 'react-redux';
-import { ProfileBio } from '../../../Store/Actions/ProfileActions/ProfileActions';
+import { useDispatch,  useSelector } from 'react-redux';
+import { ProfileBioLater } from '../../../Store/Actions/ProfileActions/ProfileActions';
+import { GetBio } from '../../../Store/Actions/ProfileActions/ProfileActions';
 
 export const ProfileEdit = (props) => {
      const dispatch = useDispatch();
     const [country, setCountry] = useState('');
     const [region, setRegion] = useState('');
+    const formData = new FormData();
 
+    useEffect(() =>{
+        dispatch(GetBio());
+     }, [] );
+const biolater = useSelector(state => state.profileReducer.getbio)
+console.log(biolater);
     const SelectCountry = (val) => {
         setCountry(val);
     }
@@ -26,8 +33,14 @@ export const ProfileEdit = (props) => {
       });
 
       const onSubmit = (data) => {
-          console.log('profile data', data)
-        dispatch(ProfileBio(data));
+        formData.append("organization", data.organization)
+        formData.append("country", country)
+        formData.append("state", region)
+        formData.append("facebook", data.socialLink1)
+        formData.append("instalgram", data.socialLink3)
+        formData.append("twitter", data.socialLink2)
+        formData.append("note", data.bio)
+        dispatch(ProfileBioLater(formData));
       
       reset();
     };
@@ -58,7 +71,8 @@ export const ProfileEdit = (props) => {
                             <div className="update__input">
                                 <div>
                                 <label for='org'>Organization</label>
-                                <input  type='text' id='org' {...register("organization")}/>
+                                <input  type='text' id='org' {...register("organization")}
+                                 defaultValue={biolater !== null && biolater.organization !== null ? biolater.organization : ""}/>
                                 </div>
                                 
                             </div>
@@ -71,9 +85,11 @@ export const ProfileEdit = (props) => {
                                 <label for='country'>Country</label>
                                 <CountryDropdown id='country' className='region'
                                     name='country'
-                                    {...register("country")}
                                         value={country}
-                                        onChange={(val) => SelectCountry(val)} /> 
+                                        onChange={(val) =>  SelectCountry(val)}
+                                        // setValue('select', e.target.value, { shouldValidate: true }
+                                        /> 
+                                   
                                 {/* <input  type='text' id='country'/> */}
                                 </div>
                                 <div>
@@ -81,10 +97,12 @@ export const ProfileEdit = (props) => {
                                 <RegionDropdown id='state' className='region'
                                      name='state'
                                     country={country}
-                                    {...register("state")}
-                                     value={region}
-                                     onChange={(val) => SelectRegion(val)} />
+                                    value={region}
+                                    onChange={(val) =>  SelectRegion(val)} 
+                                     
+                                     />
                                 {/* <input  type='text' id='city'/> */}
+                                
                                 </div>
                             </div>
                         </div>
@@ -96,14 +114,17 @@ export const ProfileEdit = (props) => {
                                 <div className="update__input">
                                 <div>
                                 <label for='url'>URL</label>
-                                <input  type='text' id='url' {...register('socialLink')}/>
+                                <input  type='text' id='url' {...register('socialLink1')}
+                                 placeholder='facebook link'
+                                 defaultValue={biolater !== null && biolater.faxebook !== null ? biolater.facebook : ""} />
                                 </div>
 
                                 <div>
                                 <label for='label'>Label</label>
                                 <input  type='text' id='label'
-                                {...register('socialPlatform')}
-                                 placeholder='LinkedIn, Twitter, Facebook'/>
+                                {...register('socialPlatform1')}
+                                value="Facebook" readOnly={true}
+                                 />
                                 </div>
                                 </div>
                                 </div>
@@ -112,13 +133,16 @@ export const ProfileEdit = (props) => {
                                 <div className="update__input">
                                 <div>
                                 <label for='url'>URL</label>
-                                <input  type='text' id='url' {...register('socialLink')}/>
+                                <input  type='text' id='url' {...register('socialLink2')}
+                                 placeholder='Twitter link'
+                                 defaultValue={biolater !== null && biolater.twitter !== null ? biolater.twitter : ""}/>
                                 </div>
 
                                 <div>
                                 <label for='label'>Label</label>
                                 <input  type='text' id='label'
-                                {...register('socialPlatform')} placeholder='LinkedIn, Twitter, Facebook'/>
+                                {...register('socialPlatform2')} value="Twitter" readOnly={true}
+                                />
                                 </div>
                                 </div>
                                 </div>
@@ -127,14 +151,16 @@ export const ProfileEdit = (props) => {
                                 <div className="update__input">
                                 <div>
                                 <label for='url'>URL</label>
-                                <input  type='text' id='url' {...register('socialLink')}/>
+                                <input  type='text' id='url' {...register('socialLink3')}
+                                placeholder='instagram link'  
+                                defaultValue={biolater !== null && biolater.instalgram !== null ? biolater.instalgram : ""}/>
                                 </div>
 
                                 <div>
                                 <label for='label'>Label</label>
                                 <input  type='text' id='label' 
-                                {...register('socialPlatform')}
-                                placeholder='LinkedIn, Twitter, Facebook' />
+                                {...register('socialPlatform3')}
+                                value="Instagram" readOnly={true} />
                                 </div>
                                 </div>
                                 </div>
@@ -144,7 +170,8 @@ export const ProfileEdit = (props) => {
                             <div className="update__bio">
                                 <label For="bio">Bio</label>
                                 <textarea name="bio" id="bio" cols="10" rows="7"
-                                {...register("bio")}></textarea>
+                                {...register("bio")}
+                                defaultValue={biolater !== null && biolater.note !== null ? biolater.note : ""}></textarea>
                                 
                         </div>
 

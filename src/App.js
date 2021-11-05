@@ -3,19 +3,17 @@ import Navigation from "./Components/Header/Navigation";
 import { AboutSubNavigation } from "./Components/Header/SubNavigation";
 import Signup from "./Components/Pages/Signup";
 import Footer from "./Components/Footer/Footer";
-// import Home from "./Components/Pages/Home";
 import Login from "./Components/Pages/Login";
 import Profile from "./Components/Pages/Profile/Profile";
 import Activities from "./Components/Pages/Profile/Activity/index";
 import { ProfileEdit } from "./Components/Pages/Profile/ProfileEdit";
 import Settings from "./Components/Pages/Settings";
 import Mains from "./Components";
-import TrendingVideos from "./Components/Pages/TrendingVideos";
-// import "../node_modules/slick-carousel/slick/slick.css"; 
-// import "../node_modules/slick-carousel/slick/slick-theme.css";
+import TrendingVideos from "./Components/Pages/Trending/TrendingVideos";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Home from "./Components/Pages/Home";
+import VideoPlay from "./Components/VideoPages/VideoPlay";
 
 
 function App() {
@@ -24,14 +22,19 @@ function App() {
     <ToastContainer/>
 
           <Switch>
-          <Route  path='/'  exact component={Home} >
+            <Route  path='/'  exact component={Home} >
               </Route>
-          <Route  path='/login'  exact component={Login} >
+              <Route  path='/login'  exact component={Login} >
             </Route>
             <Route  path='/signup'  exact component={Signup} >
             </Route>
            <Route>
-             <Mains />
+              {/* <Route path='/video' exact component={VideoPlay}>
+              </Route> */}
+              
+              <Mains exact />
+          
+         
            </Route>
           </Switch>
           

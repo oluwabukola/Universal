@@ -16,3 +16,16 @@
     }
     
 }
+
+.categoryScroll__button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+    border-radius: 30px;
+    font-size: $navlink-font-size;
+    color: $color-navbar;
+    font-weight: 500;
+    background-color: $color-white;
+    
+}

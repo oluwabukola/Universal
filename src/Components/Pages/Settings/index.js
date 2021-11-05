@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route, Redirect,  withRouter,  } from "react-router-dom"; 
 import {SettingsNav} from '../../Pages/Settings/SettingsNav';
-import SettingsAccount from './SettingsAccount'
+import SettingsAccount from './SettingsAccount';
+import SettingsPassword from "./SettingsPassword";
 function Settings() {
   return (
     <div className='settings'>
@@ -11,6 +12,9 @@ function Settings() {
           <Switch>
             <div className='settings__account'>
             <Route  path='/settings/account'  exact component={SettingsAccount} >
+            </Route>
+
+            <Route  path='/settings/password'  exact component={SettingsPassword} >
             </Route>
             {/* <Route  path='/signup'  exact component={Signup} >
             </Route>  */}

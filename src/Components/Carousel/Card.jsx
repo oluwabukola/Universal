@@ -1,6 +1,6 @@
 import React from 'react';
 import {Row, Col, Card} from 'react-bootstrap';
-import CardVideo from './Cardvideo';
+import CardVideo from './CategoryScroll';
 
 const Cards = ({...item}) => {
     return (
@@ -18,32 +18,7 @@ const Cards = ({...item}) => {
   </Card.Body>
 </Card>
                 </Col>
-                {/* <Col xs={12} md={6} lg={4} style={{backgroundColor:"green"}}>
-                <Card style={{ width: '100%' }}>
-                <CardVideo />
-                <Card.Body>
-                 <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-                    </Card.Text>
-   
-  </Card.Body>
-</Card>
-                </Col>
-                <Col xs={12} md={6} lg={4} style={{backgroundColor:"blue"}}>
-                <Card style={{ width: '100%' }}>
-        <CardVideo />
-         <Card.Body>
-         <Card.Title>Card Title</Card.Title>
-         <Card.Text>
-        Some quick example text to build on the card title and make up the bulk of
-        the card's content.
-        </Card.Text>
-   
-  </Card.Body>
-</Card>
-                </Col> */}
+               
             </Row>
         </div>
     )

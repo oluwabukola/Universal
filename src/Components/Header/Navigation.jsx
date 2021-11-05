@@ -37,6 +37,7 @@ useEffect(() => {
 
  const handleLogOut = (e) => {
      e.preventDefault();
+     console.log('logging out props')
       dispatch(LoggingOut(props));
      
   }
@@ -89,7 +90,7 @@ useEffect(() => {
                         </Link>
                     </li>
                     <li className='menudropdown__item'>
-                        <Link to='' className='menudropdown__item-link' onClick={() => setOpen(oldState => !oldState)}>
+                        <Link to='/overview' className='menudropdown__item-link' onClick={() => setOpen(oldState => !oldState)}>
                             <RiHistoryFill />
                             <div><p>watch history</p></div>
                         </Link>

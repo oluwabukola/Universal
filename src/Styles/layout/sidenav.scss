@@ -1,0 +1,70 @@
+.sidenav{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    // height: 100vh;
+    padding: 1rem 2rem;
+ 
+    background-color: $color-white;
+
+    &__close{
+        align-self: flex-end;
+        margin-bottom: 1rem;
+        cursor: pointers;
+        svg{
+            font-size: 2rem;
+            color:rgb(247, 6, 6);
+        }
+    }
+}
+
+.sidenav__container{
+    margin-bottom: 0.5rem;
+    .sidenav__list{
+        // background-color: rosybrown;
+        list-style: none;
+        padding: 0.5rem 0;
+    }
+    .sidenav__items{
+        margin-bottom: 0.5rem;
+        padding: 0.5rem 0;
+
+        a{
+            text-decoration: none;
+            color: $color-navbar;
+            font-size: 1rem;
+            font-weight: 600;
+
+        }
+    }
+}
+.sidenav__rule{
+    width: 100%;
+    height: 1px;
+    background-color:#ccc;
+    margin-bottom: 1rem;
+}
+.sidenav__contact{
+
+    &--text{
+        padding: 0;
+        color: $color-navbar;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+    }
+    &--sociallink{
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+    .sociallink-item{
+        padding: 0 1rem;
+        a{
+            color: $color-purple;
+        }
+        svg{
+            font-size: 2rem;
+        }
+    }
+}

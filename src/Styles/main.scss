@@ -5,6 +5,7 @@
 @import './base/base';
 
  @import './layout/navigation.scss';
+@import './layout/sidenav.scss';
 
 @import './layout/subnavigation.scss';
 
@@ -18,13 +19,21 @@
 
 @import './layout/card.scss';
 
+@import './layout/playvideos.scss';
+
+
 @import './pages/profile.scss';
 @import './pages/profileEdit.scss';
 
 @import './pages/settings.scss';
 
+@import './pages/categoryVideos.scss';
+@import './pages/categoryScroll.scss';
 @import './pages/trendingVideos.scss';
 
-
+@import './pages/overview.scss';
 // @import './slick.scss';
 // @import './slickTheme.scss';
+
+
+

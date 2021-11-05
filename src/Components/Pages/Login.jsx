@@ -11,7 +11,7 @@ import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from 'react-google-login';
 import {IoLogoGoogle, IoLogoFacebook} from 'react-icons/io';
 import welcome from '../../img/welcome.png';
-import {withRouter  } from 'react-router';
+import {withRouter } from 'react-router';
 
 
 

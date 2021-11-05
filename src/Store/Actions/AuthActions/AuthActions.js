@@ -104,8 +104,31 @@ export const LoginAuth = (data, props) =>{
         })
         .catch(error =>{
             console.log('error', error);
+            // console.log('status', error.response.status)
             const errorMessage = error.message;
             console.log('error message', errorMessage);
+            if(errorMessage == 'Network Error'){
+                toast.error('check internet connection', {
+                    className: css({
+                      background: "#00FF00 !important",
+                      color: "white !important",
+                      fontWeight: "bold"
+                    }),
+                    position: toast.POSITION.TOP_CENTER,
+                  });
+            }
+
+            // else if (error.response.status == 401){
+            //     toast.error('credentials not found', {
+            //         className: css({
+            //           background: "#00FF00 !important",
+            //           color: "white !important",
+            //           fontWeight: "bold"
+            //         }),
+            //         position: toast.POSITION.TOP_CENTER,
+            //       });
+            // }
+  
             dispatch(postLoginFailure(errorMessage));
         })
     }

@@ -7,6 +7,7 @@ import { signupSchema } from '../../FormValidation/FormValidation';
 import { useDispatch, useSelector} from 'react-redux';
 import{SignupAuth} from '../../Store/Actions/AuthActions/AuthActions';
 import {IoLogoGoogle, IoLogoFacebook} from 'react-icons/io';
+import welcome from '../../img/welcome.png';
 
 
 const Signup = () => {
@@ -29,13 +30,19 @@ const Signup = () => {
         <>
           <div className='login'>
               <div className='login__logo-container'>
-              <div className='login__logo-box'>
-              
-              </div>
+          
+                <img src={welcome} alt="login picture" />
               <div className="logo__text-box">
                   <h1 className='heading-text'> Universal Painless</h1>
               </div>
               </div>
+              {/* <div className='login__logo-box'>
+              
+              </div> */}
+              {/* <div className="logo__text-box">
+                  <h1 className='heading-text'> Universal Painless</h1>
+              </div> */}
+              
 
               <div className="login__form-container">
                   <div className='login__action-button'>
@@ -63,8 +70,8 @@ const Signup = () => {
 
                   </div>
                   <form className='login__form'  onSubmit={handleSubmit(onSubmit)}>
-                      <label for='fname'>First Name:</label>
-                      <input id='fname'  {...register("name")} type='text' placeholder='Fname' required />
+                      <label for='fname'>Username:</label>
+                      <input id='fname'  {...register("name")} type='text' placeholder='username' required />
                       <p>{errors.name?.message}</p>
 
                       {/* <label for='lname'>Last Name:</label>

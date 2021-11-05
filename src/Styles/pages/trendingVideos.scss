@@ -1,7 +1,7 @@
 .trend__container{
 //  background-color: $color-white !important;
-    padding: 1rem 2rem;
-    margin: 2rem 0;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
 }
 .trend__row{
    width:100% !important;
@@ -9,9 +9,22 @@
 }
 
 .trend__header{
-     
-     padding: 0.5rem  2rem;
-    margin-bottom: 0.5rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1rem  1rem;
+    // margin-bottom: 0.5rem;
+    &--start{
+        display: flex;
+        align-items: center;
+        color: $color-navbar;
+    }
+    &--end{
+        display: flex;
+        color: $color-navbar;
+        text-decoration: none;
+        align-items: center;
+    }
     .trend__icon-container{
     width: 2.5rem;
     height: 2.5rem;
@@ -45,16 +58,8 @@
 
 
 
-.col__end{
-    display: flex !important;
-  justify-content: flex-end;
-
-
-}
-
 .videolist{
     width: 100%;
-   
     padding-top: 0.8rem !important;
     padding-bottom: 0.8rem !important;
     background-color: $color-white;
@@ -79,20 +84,23 @@
         position: relative;
 
        .video__play{
-           font-size: 3rem !important;
+           font-size: 4rem !important;
+          a{
+            color: $color-white !important;
+          }
            
        }
        .video__duration{
            align-self: flex-end;
-        //    background-color: yellowgreen;
+           color: $color-white !important;
+           background-color: rgba(0, 0, 0, 0.4);
            position: absolute;
            bottom:0.3rem;
          padding: 0.1rem 0.7rem;
-        
          font-weight: 600;
          font-size: $navlink-font-size !important;
        }
-    }
+  }
 }
 
 
@@ -125,6 +133,7 @@
 
 .bottom-rule{
     color: #ccc;
-    margin: 3rem 5rem;
+    margin: 2rem 5rem 0  5rem;
+    // margin: 3rem 5rem;
     border-top: 1px solid #999;    
 }

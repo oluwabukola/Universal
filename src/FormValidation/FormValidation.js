@@ -16,7 +16,16 @@ export const signupSchema = yup.object().shape({
     organization: yup.string(),
     country: yup.string(),
     state: yup.string(),
-    socialLink: yup.string(),
-    socialPlatform: yup.string(),
-    bio: yup.string()
+    socialLink1: yup.string(),
+    socialPlatform1: yup.string(),
+    socialLink2: yup.string(),
+    socialPlatform2: yup.string(),
+    socialLink3: yup.string(),
+    socialPlatform3: yup.string(),
+    bio: yup.string(),
+    emailAddress: yup.string().email(),
+    firstName: yup.string(),
+    lastName: yup.string(),
+    address: yup.string(),
+    phoneNumber: yup.string()
   })

@@ -8,7 +8,7 @@
 html{
     // this defines what 1 rem is
     font-size: 100% !important;
-    background-color: #f8f8f8 !important;
+    background-color: $color-body!important;
     // background-color: $color-hover !important;
 }
 
@@ -19,7 +19,7 @@ body{
     max-width: 100%;
     // font-size: 100%;
     line-height: 1.6;
-    background-color: #f8f8f8 !important;
+    background-color: $color-body !important;
     // background-color: $color-hover !important;
     font-family: 'Inter', sans-serif;
 }

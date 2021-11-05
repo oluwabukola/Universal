@@ -3,14 +3,16 @@
 } 
 
 .hero{
-    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),url(C:\Users\bbaiyewu\Desktop\universal\painless\src\img\hero4.jpg);
-    background-position: left;
-    background-size: cover;
-    padding:4rem 2rem;
+    // background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),url(C:\Users\bbaiyewu\Desktop\universal\painless\src\img\hero4.jpg);
+    // background-position: left;
+    // background-size: cover;
+    background: radial-gradient(175.29% 175.29% at 50.03% 49.98%, #802FE4 11.84%, rgba(56, 21, 105, 0.851737) 28.56%, rgba(56, 21, 105, 0.914886) 36.57%, #381569 41.63%, #381569 42.68%);
+    // padding: 2rem  10rem  2rem 10rem;
+    padding:2rem 2rem;
     color: $color-white;
-    display: flex;
-   align-items: center;
-    justify-content: space-between;
+  //   display: flex;
+  //  align-items: center;
+  //   justify-content: space-between;
     &__text{
         width:65%;
         &--body{
